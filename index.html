@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Rock Paper Scissors Lizard Spok games">
-    <meta name="keywords" content="Rock Paper Scissors Lizard Spok games">
+    <meta name="description" content="Rock Paper Scissors Lizard Spock games">
+    <meta name="keywords" content="Rock Paper Scissors Lizard Spock games">
 
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         type="text/css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -18,21 +20,57 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Rock Paper Scissors Lizard Spok</title>
 </head>
+
 <body>
     <header>
-        <h1>Rock Paper Scissors Lizard Spok</h1>
+        <h1>Rock Paper Scissors Lizard Spock</h1>
     </header>
-    <section>Rules</section>
-    <section>Score</section>
-    <section>Result</section>
+    <section>
+        <button class="rules-btn">Rules</button>
+        <div class="modal-bg"></div>
+        <div class="modal">
+            <span class="close">
+                <img src="assets/images/close.svg" alt="close images">
+            </span>
+            <div class="title">Rules</div>
+            <div class="content">
+                <img src="/assets/images/rules.svg.png" alt="games rules">
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="score-board">
+            <div id="user-label" class="badge">user</div>
+            <div id="computer-label" class="badge">comp</div>
+            <span id="user-score">0</span> : <span id="computer-score">0</span>
+          </div>
+    </section>
+    <section class="result">
+        <div class="section picked flex-row hidden">
+            <div class="choice flex-column">
+              <p>You picked</p>
+              <div class="user-pick"></div>
+            </div>
+            <div class="result">
+              <div class="title">You lose</div>
+              <button>Play again</button>
+            </div>   
+            <div class="choice flex-column">
+              <p>The computer picked</p>
+              <div class="pc-pick"></div>
+            </div> 
+          </div>
+    </section>
     <section class="choise-area">
-        <button class="btn btn--big">✊</button>
-        <button class="btn btn--big">✋</button>
-        <button class="btn btn--big">✌</button>
-        <button class="btn btn--big">🤏</button>
-        <button class="btn btn--big">🖖</button>        
+        <button id="rock" class="btn btn--big choise">✊</button>
+        <button id="paper" class="btn btn--big choise">✋</button>
+        <button id="scissors" class="btn btn--big choise">✌</button>
+        <button id="lizard" class="btn btn--big choise">🤏</button>
+        <button id="spock" class="btn btn--big choise">🖖</button>
+        <p id="mesage">Make your move</p>
     </section>
     <script src="https://kit.fontawesome.com/09be5f4ab0.js" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
