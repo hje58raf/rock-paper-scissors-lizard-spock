@@ -27,3 +27,20 @@ header > h1 {
 }
 
 
+
+.choise-area {
+    text-align: center;
+}
+
+.choise {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 4rem;
+  transition: 100ms;
+}
+
+.choise:hover {
+    transform: scale(1.2);
+  }
