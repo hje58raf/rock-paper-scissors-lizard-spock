@@ -28,11 +28,12 @@ header > h1 {
 
 
 
-.choise-area {
-    text-align: center;
+.choises-area {
+    display: flex;
+    justify-content: center;
 }
 
-.choise {
+.choises {
   background: none;
   border: none;
   outline: none;
@@ -41,6 +42,6 @@ header > h1 {
   transition: 100ms;
 }
 
-.choise:hover {
+.choises:hover {
     transform: scale(1.2);
-  }
+}
