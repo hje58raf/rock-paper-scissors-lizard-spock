@@ -1,3 +1,4 @@
+function game() {
 let yourScore = 0;
 let compScore = 0;
 let gameRules = {
@@ -72,8 +73,6 @@ function convertToEmoji(word) {
 
 function win(compChoise, yourChoise) {
     yourScore++;
-    console.log("You Win");
-    console.log(yourScore);
     result.innerText = `You win`;
     yourScore_span.innerHTML = yourScore;
     document.getElementById("choise").innerHTML = convertToEmoji(yourChoise)+" beet "+convertToEmoji(compChoise);
@@ -109,16 +108,34 @@ function input(yourChoise) {
     checkWiner()
 }
 
-    
+ 
 function checkWiner() {
     if (yourScore === 10 || compScore === 10) {
-      const winner =
-        yourScore === 10
-          ? "You win the game! Congratulations!"
-          : "Computer wins the game! Try again next time!";
-      alert(winner);
-      return true;
+        gameOver();
     }
     return false;
-  }
+}
 
+function gameOver() {
+    console.log("Sranje");
+    const result = document.querySelector('.result');
+    const reloadBtn = document.querySelector('.reload');
+    
+    if(yourScore > compScore){
+        result.style.fontSize = '2rem';
+        result.innerText = 'You Won The Game'
+        result.style.color = '#308D46';
+    }
+    else{
+        result.style.fontSize = '2rem';
+        result.innerText = 'You Lost The Game';
+        result.style.color = 'red'
+    }
+    reloadBtn.innerText = 'Restart';
+    reloadBtn.style.display = 'flex'
+    reloadBtn.addEventListener('click',() => {
+        window.location.reload();
+    })
+}
+}
+game()

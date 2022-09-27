@@ -3,6 +3,7 @@
 * {
     margin: 0;
     border: 0;
+
     box-sizing: border-box;
 }
 
@@ -10,15 +11,23 @@ body {
     background-color: rgb(198, 198, 221);
 }
 
+.game{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+ 
 header {
     padding-top: 20px;
     padding-bottom: 20px;
-    background-color: black;
 }
-header > h1 {
+header > p {
     font-family: 'Oswald', sans-serif;
     text-align: center;
-    color: white;
+    color: black;
+    font-weight: bold;
+    font-size: 2rem;
 }
 
 .rules {
@@ -33,21 +42,15 @@ header > h1 {
   }
 
 .flex-container > p {
-    background-color: blue;
     margin: 10px;
     text-align: center;
     line-height: 45px;
-    font-size: 30px;
-    color:#fff
+    font-size: 2rem;
+    font-weight: bold;
+    color:black;
   }
-/*
-.container {
-    max-width: 1100px;
-    margin: auto;
-    overflow: hidden;
-    padding: 0 2rem;
-    text-align: center;
-  }
+
+
 .score-board {
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -57,21 +60,12 @@ header > h1 {
     justify-items: center;
     align-items: center;
     font-size: 1.5rem;
-    color: #fff;
+    color: black; 
 }
 
-.score-board  p:first-child {
-    background: blue;
-}
 
-.score-board  p:last-child {
-    background: black;
-}
-
-*/
 .choises-area {
     display: flex;
-    justify-content: center;
     margin-top: 1rem;
     margin-bottom: 1rem;
     justify-content: center;
@@ -106,4 +100,54 @@ header > h1 {
 
 #result {
     font-size: 2rem;
+    text-align: center;
+}
+
+.move{
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+ 
+/* Reload button style */
+.reload {
+    display: none;
+    margin-top: 2rem;
+    padding: 1rem;
+    background: green;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+ 
+.result{
+    margin-top: 20px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 612px)
+{ 
+header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+header > p {
+    font-size: 1.5rem;
+}
+
+.choises {
+  font-size: 2.5rem;
+}
+
+#choise {
+    font-size: 1.8rem;
+}
+
+#result {
+    font-size: 1rem;
+    text-align: center;
+}
+
 }

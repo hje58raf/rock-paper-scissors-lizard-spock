@@ -21,8 +21,9 @@
 
 <body>
     <header>
-        <h1>Rock Paper Scissors Lizard Spock</h1>
+        <p>Rock Paper Scissors Lizard Spock</p>
     </header>
+<section class="game">
     <section class="rules">
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary" data-toggle="modal"
@@ -48,6 +49,7 @@
                 </div>
             </div>
     </section>
+    <div class="move">Choose your move</div>
     <section class="choises-area">
         <button id="rock" class="btn btn--big choises">✊</button>
         <button id="paper" class="btn btn--big choises">✋</button>
@@ -61,13 +63,18 @@
         <p id="computer-label">comp: <span id="computer-score">0</span></p>
     </section>
 
+    <div class="result"></div>
+         
+    <!--Reload the game -->
+    <button class="reload"></button>
+    
     <section class="winner">
         <div>
             <p id="choise"></p>
         </div>
         <p id="result"></p>
     </section>
-
+</section>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
