@@ -75,7 +75,7 @@ function win(compChoise, yourChoise) {
     yourScore++;
     result.innerText = `You win`;
     yourScore_span.innerHTML = yourScore;
-    document.getElementById("choise").innerHTML = convertToEmoji(yourChoise)+" beet "+convertToEmoji(compChoise);
+    document.getElementById("choise").innerHTML = convertToEmoji(yourChoise)+" beats "+convertToEmoji(compChoise);
 }
 
 function lose(compChoise, yourChoise) {
