@@ -105,7 +105,7 @@ function input(yourChoise) {
             draw(compChoise, yourChoise);
             break;   
     }
-    checkWiner()
+    checkWiner();
 }
 
  
@@ -117,25 +117,24 @@ function checkWiner() {
 }
 
 function gameOver() {
-    console.log("Sranje");
     const result = document.querySelector('.result');
     const reloadBtn = document.querySelector('.reload');
     
     if(yourScore > compScore){
         result.style.fontSize = '2rem';
-        result.innerText = 'You Won The Game'
+        result.innerText = 'You Won The Game';
         result.style.color = '#308D46';
     }
     else{
         result.style.fontSize = '2rem';
         result.innerText = 'You Lost The Game';
-        result.style.color = 'red'
+        result.style.color = 'red';
     }
     reloadBtn.innerText = 'Restart';
-    reloadBtn.style.display = 'flex'
+    reloadBtn.style.display = 'flex';
     reloadBtn.addEventListener('click',() => {
         window.location.reload();
-    })
+    });
 }
 }
-game()
+game();
