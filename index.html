@@ -23,7 +23,7 @@
     <header>
         <p>Rock Paper Scissors Lizard Spock</p>
     </header>
-<section class="game">
+<div class="game">
     <section class="rules">
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary" data-toggle="modal"
@@ -31,7 +31,7 @@
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -41,7 +41,6 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <p class="rules">
                             First to 10 wins the Game. <br><hr>
                             <b>Rules</b> <br>
                             1. Scissors cuts Paper. <br>
@@ -54,37 +53,37 @@
                             8. Paper disproves Spock. <br>
                             9. Spock vaporizes Rock. <br>
                             10. Rock crushes Scissors. <br>
-                         </p>   
                     </div>
                 </div>
             </div>
+        </div>
     </section>
     <div class="move">Choose your move</div>
-    <section class="choises-area">
+    <div class="choises-area">
         <button id="rock" class="btn btn--big choises">✊</button>
         <button id="paper" class="btn btn--big choises">✋</button>
         <button id="scissors" class="btn btn--big choises">✌</button>
         <button id="lizard" class="btn btn--big choises">🤏</button>
         <button id="spock" class="btn btn--big choises">🖖</button>
-    </section>
+    </div>
 
-    <section class="flex-container score-board">
+    <div class="flex-container score-board">
         <p id="user-label">user: <span id="user-score">0</span></p>
         <p id="computer-label">comp: <span id="computer-score">0</span></p>
-    </section>
+    </div>
 
     <div class="result"></div>
          
     <!--Reload the game -->
     <button class="reload"></button>
     
-    <section class="winner">
+    <div class="winner">
         <div>
             <p id="choise"></p>
         </div>
         <p id="result"></p>
-    </section>
-</section>
+    </div>
+</div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
