@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: rgb(198, 198, 221);
+    background-color: #c6c6dd;
 }
 
 .game{
@@ -29,12 +29,17 @@ header > p {
     font-weight: bold;
     font-size: 2rem;
 }
+ 
+/* Modal section */
 
 .rules {
+    font-family: 'Oswald', sans-serif;
     padding-top: 10px;
     text-align: center;
     margin-bottom: 1rem;
 }
+
+/* Score Board */
 
 .flex-container {
     display: flex;
@@ -52,6 +57,7 @@ header > p {
 
 
 .score-board {
+    font-family: 'Oswald', sans-serif;
     margin-top: 1rem;
     margin-bottom: 1rem;
     display: grid;
@@ -63,6 +69,7 @@ header > p {
     color: black; 
 }
 
+/* Picked section */
 
 .choises-area {
     display: flex;
@@ -73,6 +80,8 @@ header > p {
     align-items: center;
     font-size: 1.5rem;
 }
+
+ /* User choice */
 
 .choises {
   background: none;
@@ -86,6 +95,8 @@ header > p {
 .choises:hover {
     transform: scale(1.2);
 }
+
+/* Result block */
 
 .winner {
     padding-top: 10px;
@@ -108,6 +119,12 @@ header > p {
     text-align: center;
 }
  
+.result{
+    margin-top: 20px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
 /* Reload button style */
 .reload {
     display: none;
@@ -120,11 +137,7 @@ header > p {
     cursor: pointer;
 }
  
-.result{
-    margin-top: 20px;
-    font-size: 1.2rem;
-    text-align: center;
-}
+/* Responsive Design */
 
 @media screen and (max-width: 612px)
 { 

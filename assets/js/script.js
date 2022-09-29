@@ -47,7 +47,7 @@ const scissors = document.getElementById('scissors');
 const lizard = document.getElementById('lizard');
 const spock = document.getElementById('spock');
 
-
+// Player Options
 
 rock.addEventListener('click', () => input('rock'));
 paper.addEventListener('click', () => input('paper'));
@@ -55,13 +55,15 @@ scissors.addEventListener('click', () => input('scissors'));
 lizard.addEventListener('click', () => input('lizard'));
 spock.addEventListener('click', () => input('spock'));
 
-
+ //Computer Options
 
 function computerChoise() {
     const compInput = ["rock", "paper", "scissors", "lizard", "spock"];
     const compChoise = compInput[[Math.floor(Math.random() * 5)]];
     return compChoise;
 }
+
+// Convert text to emoji
 
 function convertToEmoji(word) {
     if (word === "rock") return "Rock ✊";
@@ -70,6 +72,8 @@ function convertToEmoji(word) {
     if (word === "lizard") return "Lizard 🤏";
     return "Spock 🖖";
 }
+
+// Get game winner and Show score
 
 function win(compChoise, yourChoise) {
     yourScore++;
@@ -91,6 +95,8 @@ function draw (compChoise, yourChoise) {
     result.innerText = `You draw`;
     document.getElementById("choise").innerHTML = convertToEmoji(yourChoise)+" equals "+convertToEmoji(compChoise);
 }
+
+// Check winner and restart game
 
 function input(yourChoise) {
     const compChoise = computerChoise();
